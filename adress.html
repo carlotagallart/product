@@ -1,0 +1,82 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="css/index.css">
+
+        </head>
+        <body>
+        <div id="adress_container">
+            <div class="adress">
+        <h3>Adress</h3>
+        <!--Form-->
+        <form action="" method="GET" id="form2" class="form" >
+            <!--first name-->
+            <label for="fname">First name</label> <br>
+            <input type="text" name="fname" id="fname"value=""> <br>
+            <div id="errorFname"></div> <br> 
+            <!--last name-->
+            <label for="lname">Last name</label> <br>
+            <input type="text" name="lname" id="lname" value=""> <br>
+            <div id="errorLname"></div> <br> 
+            <!--birthday-->
+            <label for="birthday">Birthday</label> <br>
+            <input type="date" name="birthday" id="birthday" value=""> <br>
+            <div id="errorBirthday"></div> <br> 
+            <!-- Adress1 -->
+            <label for="adress1">Adress 1</label> <br>
+            <input type="text" name="adress1" id="adress1" value=""> <br>
+            <div id="errorAdress1"></div> <br>
+            <!-- Adress2 -->
+            <label for="adress2">Adress 2</label> <br>
+            <input type="text" name="adress2" id="adress2" value=""> <br>
+            <div id="errorAdress2"></div> <br>
+            <!--Postal Code-->
+            <label for="pcode">Postal Code</label> <br>
+            <input type="number" name="pcode" id="pcode" value=""> <br>
+            <div id="errorPcode"></div> <br> 
+            <!-- Country-->
+            <div class="country-container">
+                <label for="country">Country</label> <br>
+                    <select class="country" id="country" name="country">
+                    <option value="andorra">Andorra</option>
+                    <option value="espana">España</option>
+                    <option value="francia">Francia</option>
+                    <option value="alemania">Alemania</option>
+                    <option value="grecia">Grecia</option>
+                    </select> <br> <br>
+                <div id="errorCountry"></div> <br> 
+                </div>
+            <!--Phone Country Cod & Phone-->
+            <div class="phone-container">
+                <label for="phone">Phone</label> <br>
+                <select class="country-phone" id="country-phone">
+                    <option value="AND">AND</option>
+                    <option value="ESP">ESP</option>
+                    <option value="FRA">FRA</option>
+                    <option value="DEU">DEU</option>
+                    <option value="GRC">GRC</option>
+                </select>
+                <input  class="input-phone" type="tel" id="phone" name="phone" value=""><br><br>
+                <div id="errorPcountry"></div> <br> 
+            </div>
+            <!--Checkbox-->
+            <input type="checkbox" id="checkbox-adress" name="checkbox-adress" value="checkadress">
+            <label class="checkbox-label" for="regadress">This is my regular adress</label>
+            <!--footer-->
+            <div class="d-flex footer">
+            <div class="bottonsform">
+            <!--Clear-->
+            <input type="button" onclick="resetForm()" class="clearformbtn" value="Clear form" id="clearform">
+            <!--Sumbit-->
+            <input type="submit2" class="nextbtn" value="Next" id="submit2">
+            </div>
+            </div>
+        </div>
+        </form>
+        </div>
+
+        <script src="index.js"></script>
+        </body>
+
+        </html>

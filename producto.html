@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping Wizard</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="container">
+      <div id="product" class="d-flex">
+        <div class="column left-column">
+          <div class="product-alt-images">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/715HCLsOHbL._AC_SX679_.jpg" id="altimg-0" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/81ODUtsIvGL._AC_SX679_.jpg" id="altimg-1" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71nuvX0UC2L._AC_SX679_.jpg" id="altimg-2" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/81TVpK3RqJL._AC_SX679_.jpg" id="altimg-3" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71zl-f5Bw0L._AC_SX679_.jpg" id="altimg-4" />
+          </div>
+          <div class="product-image">
+            <img id="product-image" src="https://images-na.ssl-images-amazon.com/images/I/715HCLsOHbL._AC_SX679_.jpg" />
+          </div>
+        </div>
+        <div class="column">
+          <h1>Apple iPhone 11</h1>
+          <p>Price</p>
+          <p id="product-price">799€</p>
+          <p>Storage</p>
+          <select id="storage" name="storage">
+            <option value="64">64 GB</option>
+            <option value="128">128 GB</option>
+            <option value="256">256 GB</option>
+          </select>
+          <p>Color</p>
+          <div class="product-colors">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/210F7MIhpnL._SS36_.jpg" id="color-red" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/11KJOc8b0ZL._SS36_.jpg" id="color-mauve" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/116HI6gRBrL._SS36_.jpg" id="color-green" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/11j3Uy2RYQL._SS36_.jpg" id="color-yellow" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/01OcomNENWL._SS36_.jpg" id="color-white" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/11VvvEVdZXL._SS36_.jpg" id="color-black" />
+          </div>
+          <input id="product-buy" class="next-input" type="button" value="Buy" />
+        </div>
+      </div>
+
+      <div id="header" class="d-flex purchase__header hidden">
+        <div class="progressBar__general"></div>
+        <div class="progressBar__actual"></div>
+        <ul class="d-flex">
+          <li class="blackBg">Profile</li>
+          <li>Adress</li>
+          <li>Shipping</li>
+          <li>Finish</li>
+        </ul>
+      </div>
+
+      <div id="profile_container" class="hidden">
+            <div class="profile" id="profile">
+                <h3>Profile</h3>
+                <!--Form-->
+                <form action="" method="GET" id="form">
+                      <!--username-->
+                      <label for="username">Username</label> <br>
+                      <input type="text" name="username" id="username"> <br>
+                      <div id="errorUsername"></div> <br> 
+                      <!--email-->
+                      <label for="email">Email</label> <br>
+                      <input type="text" name="email" id="email" value=""> <br>
+                      <div id="errorEmail"></div> <br> 
+                      <!--password-->
+                      <label for="password">Password</label> <br>
+                      <input type="text" name="password" id="password" value=""> <br>
+                      <div id="errorPassword"></div> <br> 
+                      <!--confirm password-->
+                      <label for="cpassword">Confirm password</label> <br>
+                      <input type="text" name="cpassword" id="cpassword" value=""> <br>
+                      <div id="errorCpassword"></div> <br>
+
+                      <input type="submit" id="hiddenSubmit1" name="hiddenSubmit1" value="" class="hidden">
+                      <input type="reset" id="hiddenReset1" name="hiddenReset1" value="" class="hidden">
+                  </form>
+            </div>
+      </div>
+
+     <div id="adress_container" class="hidden">
+      <div class="adress" id="adress">
+        <h3>Adress</h3>
+        <!--Form-->
+        <form action="" method="GET" id="form2" class="form" >
+          <!--first name-->
+          <label for="fname">First name</label> <br>
+          <input type="text" name="fname" id="fname"> <br>
+          <div id="errorFname"></div> <br> 
+          <!--last name-->
+          <label for="lname">Last name</label> <br>
+          <input type="text" name="lname" id="lname" value=""> <br>
+          <div id="errorLname"></div> <br> 
+          <!--birthday-->
+          <label for="birthday">Birthday</label> <br>
+          <input type="date" name="birthday" id="birthday" value=""> <br>
+          <div id="errorBirthday"></div> <br> 
+          <!-- Adress1 -->
+          <label for="adress1">Adress 1</label> <br>
+          <input type="text" name="adress1" id="adress1" value=""> <br>
+          <div id="errorAdress1"></div> <br>
+          <!-- Adress2 -->
+          <label for="adress2">Adress 2</label> <br>
+          <input type="text" name="adress2" id="adress2" value=""> <br>
+          <div id="errorAdress2"></div> <br>
+          <!--Postal Code-->
+          <label for="pcode">Postal Code</label> <br>
+          <input type="text" name="pcode" id="pcode" value=""> <br>
+          <div id="errorPostalCode"></div> <br> 
+          <!-- Country-->
+          <div class="country-container">
+              <label for="country">Country</label> <br>
+                  <select class="country" id="country" name="country" onchange="code();">
+                  <option value="andorra">Andorra</option>
+                  <option value="espana">España</option>
+                  <option value="francia">Francia</option>
+                  <option value="alemania">Alemania</option>
+                  <option value="grecia">Grecia</option>
+                  </select> <br> <br>
+
+                </div>
+          <!--Phone Country Cod & Phone-->
+          <div class="phone-container" >
+              <label for="phone">Phone</label> <br>
+              <select class="country-phone" id="country-phone" onclick="">
+                 <option value="AND">AND +376</option>
+                 <option value="ESP">ESP +64</option>
+                 <option value="FRA">FRA +33</option> 
+                 <option value="DEU">DEU +49</option>
+                 <option value="GRC">GRC +30</option>
+              </select>
+              <input  class="input-phone" type="tel" id="phone" name="phone" value=""><br>
+
+              <div id="errorPhone"></div> <br> 
+            </div>
+          <!--Checkbox-->
+          <input type="checkbox" id="checkbox-adress" name="checkbox-adress" value="checkadress">
+          <label class="checkbox-label" for="regadress">This is my regular adress</label>
+          <!--footer-->
+          
+          
+          <input type="submit" id="hiddenSubmit2" name="hiddenSubmit2" value="" class="hidden">
+          <input type="reset" id="hiddenReset2" name="hiddenReset2" value="" class="hidden">
+        
+        </form>
+       </div>
+       
+       
+  </div>
+      
+      
+
+      <div id="shipping" class="d-flex container__shipping hidden">
+        <form>
+          <div class="d-flex shipping__preferences">
+            <span class="d-flex title title__shipping">Shipping</span>
+            <div class="d-flex shipping__options">
+              <span class="bold d-flex title__shipping__type">Shipping type</span>
+              <ul>
+                <li>
+                  <label class="container__custom__checkbox">Free shipment (72h)
+                    <input type="radio" id="shipment__1" name="shipmentMethod" value="free" required>
+                    <span class="checkmark checkmark__round"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="container__custom__checkbox">Extra shipping (48h) <span
+                      class="bold">4,99€</span>
+                    <input type="radio" id="shipment__2" name="shipmentMethod" value="extra">
+                    <span class="checkmark checkmark__round"></span>
+                  </label>
+                </li>
+                <li>
+                  <label class="container__custom__checkbox">Premium (24h) <span class="bold">9,99€</span>
+                    <input type="radio" id="shipment__3" name="shipmentMethod" value="premium">
+                    <span class="checkmark checkmark__round"></span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-flex container__delivery__date hidden">
+            <span class="bold">Your order will arrive:</span>
+            <span>ESTIMATE DELIVERY DATE:</span>
+            <span>
+                    <span>Between </span><span class="bold start__delivery__date"> this is just a test
+                    </span><span> and </span><span class="bold end__delivery__date"> this is just a test </span>
+                </span>
+          </div>
+          <div class="d-flex container__gift">
+            <label class="container__custom__checkbox">Is it a gift?
+              <input type="checkbox" id="gift" name="giftCheck" value="gift">
+              <span class="checkmark checkmark__square"></span>
+            </label>
+            <div class="d-flex container__gift__hidden hidden ">
+              <label class="d-flex container__gift__text">Gift message
+                <input type="text" id="giftText" placeholder="Write a special message :)" maxlength="200"
+                       value="">
+              </label>
+              <span>Gift wrapper image</span>
+              <label class="d-flex myWrapper container__custom__checkbox">Select image
+                <input class="checkbox" type="file" id="wrapper" name="myWrapper" accept="image/jpeg, image/png, image/jpg">
+                <span class="largeCheckmark checkmark__square"></span>
+              </label>
+            </div>
+          </div>
+          <input type="submit" id="hiddenSubmit3" name="hiddenSubmit3" value="" class="hidden">
+          <input type="reset" id="hiddenReset3" name="hiddenReset3" value="" class="hidden">
+        </form>
+      </div>
+
+      <div id="footer" class="d-flex footer hidden">
+        <div class="submit">
+          <input class="clear-input" type="reset" value="Clear form">
+          <input class="next-input" type="submit" value="Next">
+        </div>
+      </div>
+
+      <div id="finish" class="hidden">
+        <div class="finish-wrap">
+          <div class="your-purchase">
+            <div class="your-purchase-wrap">
+              <h2>Your purchase</h2>
+              <div class="your-purchase-details-wrap">
+                <img
+                    class="finish-product-image"
+                    src="https://images-na.ssl-images-amazon.com/images/I/715HCLsOHbL._AC_SX679_.jpg"
+                />
+                <div class="your-purchase-details">
+                  <h4>Apple iPhone 11</h4>
+                  <p>
+                    Storage: <span class="bold finish-storage">64</span
+                  ><span class="bold"> GB</span>
+                  </p>
+                  <p class="finish-product-color">Color:</p>
+                  <div class="finish-square-color"></div>
+                  <p>ESTIMATE DELIVERY DATE:</p>
+                  <p>
+                    Between
+                    <span class="bold finish-first-date">a temporary date</span>
+                    and <span class="bold finish-second-date">another date</span>
+                  </p>
+                </div>
+              </div>
+              <input
+                  type="checkbox"
+                  id="conditions"
+                  name="conditions"
+                  value="yes"
+              />
+              <label for="conditions">
+                I have read and I accept the terms and conditions.</label
+              >
+              <p class="conditions-required">
+                Please accept the terms and conditions.
+              </p>
+              <button type="button" id="buynow-button">Buy Now!</button>
+            </div>
+          </div>
+          <div class="your-order">
+            <div class="your-order-wrap">
+              <h4>Your Order</h4>
+              <hr />
+              <p>
+                Apple iPhone 11: <span class="bold finish-price">799</span
+              ><span class="bold">€</span>
+              </p>
+              <p>
+                <span class="finish-shipp-type">Premium</span> Shipping:
+                <span class="bold finish-shipp-price">9.99</span
+                ><span class="bold">€</span>
+              </p>
+              <hr />
+              <p>
+                Total: <span class="bold finish-total-price">799</span
+              ><span class="bold">€</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="thankyou" class="hidden">
+        <div class="thankyou-wrap">
+          <div class="order-complete">
+            <h2>Your order is complete! 🎉</h2>
+            <p>Thank you for your order!</p>
+          </div>
+          <div class="thankyou-details-wrap">
+            <div class="your-purchase">
+              <div class="your-purchase-wrap">
+                <h2>Your purchase</h2>
+                <div class="your-purchase-details-wrap">
+                  <img
+                      class="finish-product-image"
+                      src="https://images-na.ssl-images-amazon.com/images/I/715HCLsOHbL._AC_SX679_.jpg"
+                  />
+                  <div class="your-purchase-details">
+                    <h4>Apple iPhone 11</h4>
+                    <p>
+                      Storage: <span class="bold finish-storage">64</span
+                    ><span class="bold"> GB</span>
+                    </p>
+                    <p class="finish-product-color">Color:</p>
+                    <div class="finish-square-color"></div>
+                    <p>ESTIMATE DELIVERY TIME:</p>
+                    <p>
+                      Between
+                      <span class="bold finish-first-date">a temporary date</span>
+                      and
+                      <span class="bold finish-second-date">another date</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="your-order">
+              <div class="your-order-wrap">
+                <h4>Payment Details</h4>
+                <hr />
+                <p>
+                  Apple iPhone 11: <span class="bold finish-price">799</span
+                ><span class="bold">€</span>
+                </p>
+                <p>
+                  <span class="finish-shipp-type">Premium</span> Shipping:
+                  <span class="bold finish-shipp-price">9.99</span
+                  ><span class="bold">€</span>
+                </p>
+                <hr />
+                <p>
+                  Total: <span class="bold finish-total-price">799</span
+                ><span class="bold">€</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="elapsed-time">
+          <p>
+            Your registration took:
+            <span class="bold" id="finish-time">Some time</span>
+          </p>
+        </div>
+      </div>
+      
+      <div class="hidden timeMessageOut" id="time-warning">
+        <p>You started registering <span class="bold"><span class="elapsedTime"></span> minutes ago</span></p>
+        <p>Hurry up!</p>
+      </div>
+      
+    </div>
+  </body>
+</html>
